@@ -28,6 +28,7 @@ class MachineListController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        isMachineDataEmpty()
     }
     
     private func setupViewController() {

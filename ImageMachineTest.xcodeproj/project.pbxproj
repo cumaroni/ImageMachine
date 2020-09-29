@@ -48,6 +48,14 @@
 		B0F0FC45252334B100C382A2 /* MachineRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC44252334B100C382A2 /* MachineRealmModel.swift */; };
 		B0F0FC47252334BA00C382A2 /* MachineRealmTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC46252334BA00C382A2 /* MachineRealmTable.swift */; };
 		B0F0FC4A2523432C00C382A2 /* MachineListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC492523432C00C382A2 /* MachineListCell.swift */; };
+		B0F0FC4D25234DEB00C382A2 /* MachineAddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC4C25234DEB00C382A2 /* MachineAddInteractor.swift */; };
+		B0F0FC4F25234DF900C382A2 /* MachineAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC4E25234DF900C382A2 /* MachineAddPresenter.swift */; };
+		B0F0FC5125234E0000C382A2 /* MachineAddProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5025234E0000C382A2 /* MachineAddProtocol.swift */; };
+		B0F0FC5325234E0900C382A2 /* MachineAddRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5225234E0900C382A2 /* MachineAddRouter.swift */; };
+		B0F0FC5525234E1400C382A2 /* MachineAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5425234E1400C382A2 /* MachineAddView.swift */; };
+		B0F0FC5725234E2700C382A2 /* MachineAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5625234E2700C382A2 /* MachineAddController.swift */; };
+		B0F0FC5925234FD000C382A2 /* MyBackBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5825234FD000C382A2 /* MyBackBtn.swift */; };
+		B0F0FC5B2523502000C382A2 /* MyNormalField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FC5A2523502000C382A2 /* MyNormalField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +126,14 @@
 		B0F0FC44252334B100C382A2 /* MachineRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineRealmModel.swift; sourceTree = "<group>"; };
 		B0F0FC46252334BA00C382A2 /* MachineRealmTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineRealmTable.swift; sourceTree = "<group>"; };
 		B0F0FC492523432C00C382A2 /* MachineListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineListCell.swift; sourceTree = "<group>"; };
+		B0F0FC4C25234DEB00C382A2 /* MachineAddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddInteractor.swift; sourceTree = "<group>"; };
+		B0F0FC4E25234DF900C382A2 /* MachineAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddPresenter.swift; sourceTree = "<group>"; };
+		B0F0FC5025234E0000C382A2 /* MachineAddProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddProtocol.swift; sourceTree = "<group>"; };
+		B0F0FC5225234E0900C382A2 /* MachineAddRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddRouter.swift; sourceTree = "<group>"; };
+		B0F0FC5425234E1400C382A2 /* MachineAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddView.swift; sourceTree = "<group>"; };
+		B0F0FC5625234E2700C382A2 /* MachineAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineAddController.swift; sourceTree = "<group>"; };
+		B0F0FC5825234FD000C382A2 /* MyBackBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBackBtn.swift; sourceTree = "<group>"; };
+		B0F0FC5A2523502000C382A2 /* MyNormalField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNormalField.swift; sourceTree = "<group>"; };
 		CC94B4DF2D6BD5EA2DB9922A /* Pods-ImageMachineTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageMachineTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageMachineTestTests/Pods-ImageMachineTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFEA68F5E7F0B9D427D52A18 /* Pods_ImageMachineTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageMachineTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6442930A51E8007F2CF72C8 /* Pods_ImageMachineTest_ImageMachineTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageMachineTest_ImageMachineTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +303,8 @@
 		B0F0FBDC252321ED00C382A2 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				B0F0FC5825234FD000C382A2 /* MyBackBtn.swift */,
+				B0F0FC5A2523502000C382A2 /* MyNormalField.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -322,6 +340,7 @@
 		B0F0FC2925232EC800C382A2 /* Machine Data */ = {
 			isa = PBXGroup;
 			children = (
+				B0F0FC4B25234DD300C382A2 /* Add */,
 				B0F0FC2B25232ED900C382A2 /* List */,
 				B0F0FC2C25232EE000C382A2 /* Detail */,
 			);
@@ -379,6 +398,19 @@
 				B0F0FC492523432C00C382A2 /* MachineListCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B0F0FC4B25234DD300C382A2 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				B0F0FC4C25234DEB00C382A2 /* MachineAddInteractor.swift */,
+				B0F0FC4E25234DF900C382A2 /* MachineAddPresenter.swift */,
+				B0F0FC5025234E0000C382A2 /* MachineAddProtocol.swift */,
+				B0F0FC5225234E0900C382A2 /* MachineAddRouter.swift */,
+				B0F0FC5425234E1400C382A2 /* MachineAddView.swift */,
+				B0F0FC5625234E2700C382A2 /* MachineAddController.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		BE0FF4482590AD67755ABD05 /* Pods */ = {
@@ -652,19 +684,27 @@
 				B0F0FC45252334B100C382A2 /* MachineRealmModel.swift in Sources */,
 				B0F0FC1B25232D6B00C382A2 /* UIAppearance+Extensions.swift in Sources */,
 				B0F0FC3225232F1900C382A2 /* MachineListProtocol.swift in Sources */,
+				B0F0FC5125234E0000C382A2 /* MachineAddProtocol.swift in Sources */,
 				B0F0FC1925232D6B00C382A2 /* Realm+Extensions.swift in Sources */,
 				B0F0FC3C252330B100C382A2 /* Margin.swift in Sources */,
+				B0F0FC5525234E1400C382A2 /* MachineAddView.swift in Sources */,
 				B0F0FC2525232D6B00C382A2 /* Date+Extensions.swift in Sources */,
+				B0F0FC5B2523502000C382A2 /* MyNormalField.swift in Sources */,
+				B0F0FC5325234E0900C382A2 /* MachineAddRouter.swift in Sources */,
 				B0F0FC2025232D6B00C382A2 /* String+Extensions.swift in Sources */,
 				B0F0FC3625232F2A00C382A2 /* MachineListView.swift in Sources */,
 				B0F0FC4A2523432C00C382A2 /* MachineListCell.swift in Sources */,
 				B0F0FC3A2523309500C382A2 /* UITableView+Extensions.swift in Sources */,
+				B0F0FC5925234FD000C382A2 /* MyBackBtn.swift in Sources */,
 				B0F0FBE82523257100C382A2 /* BaseConfig.swift in Sources */,
 				B0F0FC1D25232D6B00C382A2 /* UIStackView+Extensions.swift in Sources */,
+				B0F0FC4D25234DEB00C382A2 /* MachineAddInteractor.swift in Sources */,
 				B0F0FC2825232D9500C382A2 /* DeviceTypeEn.swift in Sources */,
 				B0F0FC2125232D6B00C382A2 /* CGFloat+Extensions.swift in Sources */,
 				B0F0FC3025232F1100C382A2 /* MachineListPresenter.swift in Sources */,
 				B0F0FC3425232F2100C382A2 /* MachineListRouter.swift in Sources */,
+				B0F0FC4F25234DF900C382A2 /* MachineAddPresenter.swift in Sources */,
+				B0F0FC5725234E2700C382A2 /* MachineAddController.swift in Sources */,
 				B0F0FBE62523256600C382A2 /* BaseSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
