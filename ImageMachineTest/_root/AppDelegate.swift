@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BaseConfig.initialize()
         
         window = UIWindow(frame: mainScreen)
-        window?.rootViewController = BaseRouter.createNavbar(NotesController())
+        window?.rootViewController = BaseRouter.createNavbar(MachineListController())
         window?.makeKeyAndVisible()
         
         return true
