@@ -14,7 +14,9 @@ class MachineListController: UIViewController {
     lazy var presenter: MachineListPresenterDelegate = MachineListPresenter(view: self)
      
     var disposable = DisposeBag()
-    private var selectedNoteIndex: IndexPath = IndexPath()
+    
+    var machineData = BehaviorRelay<[MachineRealmModel]>(value: [])
+    var data: [MachineRealmModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,38 @@ class MachineListController: UIViewController {
     }
     
     private func binding() {
+        bindAddBtn()
+        bindSearchField()
+        bindFilterBtn()
+        bindMachineTblView()
+        bindQRBtn()
+    }
+    
+    private func bindAddBtn() {
         
     }
+    
+    private func bindSearchField() {
+        
+    }
+    
+    private func bindFilterBtn() {
+        
+    }
+    
+    private func bindMachineTblView() {
+        
+    }
+    
+    private func bindQRBtn() {
+        
+    }
+    
+    private func isMachineDataEmpty() {
+        root.emptyLbl.isHidden = machineData.value.count != 0
+        root.searchField.allowsEditingTextAttributes = machineData.value.count != 0
+    }
+    
 }
 
 extension MachineListController: MachineListViewControllerDelegate {
