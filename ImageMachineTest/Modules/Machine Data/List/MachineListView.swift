@@ -61,7 +61,7 @@ final class MachineListView: UIView {
         }
         
         lineView.style {
-            $0.setAsLine(height: 0.7)
+            $0.setAsLine(height: 0.5)
         }
         
         addBtn.style {

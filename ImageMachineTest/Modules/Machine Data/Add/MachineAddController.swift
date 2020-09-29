@@ -15,8 +15,6 @@ class MachineAddController: UIViewController {
      
     var disposable = DisposeBag()
     
-    var machineData = BehaviorRelay<[MachineRealmModel]>(value: [])
-    var data: [MachineRealmModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
