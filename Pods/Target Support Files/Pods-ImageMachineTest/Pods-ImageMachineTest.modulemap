@@ -1,6 +1,0 @@
-framework module Pods_ImageMachineTest {
-  umbrella header "Pods-ImageMachineTest-umbrella.h"
-
-  export *
-  module * { export * }
-}
