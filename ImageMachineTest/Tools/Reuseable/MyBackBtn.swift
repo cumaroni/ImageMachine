@@ -7,6 +7,7 @@
 //
   
 import RxSwift
+import RxDataSources
 
 final class MyBackBtn: UIView {
      
@@ -36,7 +37,7 @@ final class MyBackBtn: UIView {
     
     private func setupView() {
         backImg.style {
-            $0.image = #imageLiteral(resourceName: "ic_left_arrow")
+            $0.image = #imageLiteral(resourceName: "ic_back")
             $0.tintColor = textColor
         }
         

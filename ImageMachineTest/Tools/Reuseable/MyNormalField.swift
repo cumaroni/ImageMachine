@@ -48,7 +48,7 @@ final class MyNormalField: UIView {
         titleLbl.style {
             $0.font = .boldSystemFont(ofSize: Margin.f16)
             $0.textAlignment = .left
-            $0.textColor = .white
+            $0.textColor = .darkText
         }
         
         requiredLbl.style {
