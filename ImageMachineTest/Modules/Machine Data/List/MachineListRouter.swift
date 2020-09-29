@@ -13,5 +13,10 @@ final class MachineListRouter: MachineListRouterDelegate {
     
     init(view: MachineListViewControllerDelegate?) {
         source = view as? UIViewController
-    } 
+    }
+    
+    func pushToMachineAdd() {
+        let addVc = MachineAddController()
+        source?.navigationController?.pushViewController(addVc, animated: true)
+    }
 }

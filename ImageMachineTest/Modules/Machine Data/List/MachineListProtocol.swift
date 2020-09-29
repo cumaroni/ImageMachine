@@ -10,15 +10,20 @@ import UIKit
 
 protocol MachineListViewControllerDelegate: AnyObject {
     
+    
 }//VIEW_CONTROLLER
 
 protocol MachineListPresenterDelegate: AnyObject {
     
     func viewDidLoad()
     
+    func pushToMachineAdd()
+    
 }//PRESENTER
 
 protocol MachineListRouterDelegate: AnyObject {
+    
+    func pushToMachineAdd()
     
 }//ROUTER
 

@@ -23,7 +23,11 @@ extension MachineListPresenter: MachineListPresenterDelegate {
     
     func viewDidLoad() {
         
-    } 
+    }
+    
+    func pushToMachineAdd() {
+        router.pushToMachineAdd()
+    }
     
 }//DELEGATE
 

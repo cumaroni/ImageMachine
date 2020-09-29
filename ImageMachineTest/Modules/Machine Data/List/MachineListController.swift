@@ -44,7 +44,10 @@ class MachineListController: UIViewController {
     }
     
     private func bindAddBtn() {
-        
+        func addBtnPPressed() {
+            presenter.pushToMachineAdd()
+        }
+        root.addBtn.rx.tap.subscribe(onNext: addBtnPPressed).disposed(by: disposable)
     }
     
     private func bindSearchField() {
@@ -65,7 +68,7 @@ class MachineListController: UIViewController {
     
     private func isMachineDataEmpty() {
         root.emptyLbl.isHidden = machineData.value.count != 0
-        root.searchField.allowsEditingTextAttributes = machineData.value.count != 0
+        root.searchField.isUserInteractionEnabled = machineData.value.count != 0
     }
     
 }
