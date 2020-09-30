@@ -6,8 +6,7 @@
 //  Copyright © 2020 Roniaja. All rights reserved.
 //
 
-import RxSwift
-import RxRelay
+import RxSwift 
 
 class MachineAddController: UIViewController {
     lazy var root = MachineAddView()

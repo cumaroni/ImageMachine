@@ -10,13 +10,13 @@ import UIKit
 
 final class MachineAddView: UIView {
     
-    let backBtn = MyBackBtn(title: "Back")
+    let backBtn = NormalBackBtn(title: "Back")
     let navLbl = UILabel()
     let lineView = UIView()
     let stackView = UIStackView()
-    let nameField = MyNormalField()
-    let typeField = MyNormalField()
-    let qrCodeField = MyNormalField()
+    let nameField = NormalTextField()
+    let typeField = NormalTextField()
+    let qrCodeField = NormalTextField()
     let addBtn = UIButton()
     
     init() {
