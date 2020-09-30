@@ -1,14 +1,14 @@
 //
-//  MyNormalField.swift
+//  NormalTextField.swift
 //  ImageMachineTest
 //
-//  Created by Cumaroni on 29/09/20.
+//  Created by Cumaroni on 30/09/20.
 //  Copyright © 2020 Roniaja. All rights reserved.
 //
 
 import UIKit
 
-final class MyNormalField: UIView {
+final class NormalTextField: UIView {
     
     private let titleLbl = UILabel()
     private let requiredLbl = UILabel()
@@ -92,6 +92,8 @@ final class MyNormalField: UIView {
             make.trailing.bottom.equalTo(normalView).offset(-Margin.s12)
         }
         
+        setNeedsLayout()
+        layoutIfNeeded()
     }
     
 }

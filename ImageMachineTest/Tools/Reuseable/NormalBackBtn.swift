@@ -1,15 +1,15 @@
 //
-//  MyBackBtn.swift
+//  NormalBackBtn.swift
 //  ImageMachineTest
 //
-//  Created by Cumaroni on 29/09/20.
+//  Created by Cumaroni on 30/09/20.
 //  Copyright © 2020 Roniaja. All rights reserved.
 //
-  
+
 import RxSwift
 import RxDataSources
 
-final class MyBackBtn: UIView {
+final class NormalBackBtn: UIView {
      
     private let backImg = UIImageView()
     private let titleLbl = UILabel()
