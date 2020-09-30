@@ -10,6 +10,7 @@ import UIKit
 
 protocol MachineListViewControllerDelegate: AnyObject {
     
+    func sortMachineData(_ isByName: Bool)
     
 }//VIEW_CONTROLLER
 
@@ -19,11 +20,15 @@ protocol MachineListPresenterDelegate: AnyObject {
     
     func pushToMachineAdd()
     
+    func presentSortAlert()
+    
 }//PRESENTER
 
 protocol MachineListRouterDelegate: AnyObject {
     
     func pushToMachineAdd()
+    
+    func presentSortAlert(_ isSorted: @escaping (Bool) -> Void)
     
 }//ROUTER
 

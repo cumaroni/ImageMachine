@@ -16,7 +16,7 @@ final class MachineListView: UIView {
     let searchView = UIView()
     let searchImg = UIImageView()
     let searchField = UITextField()
-    let filterBtn = UIButton()
+    let sortBtn = UIButton()
     let machineTblView = UITableView()
     let qrView = UIView()
     let qrImg = UIImageView()
@@ -32,7 +32,7 @@ final class MachineListView: UIView {
         sv([
             navLbl, addBtn,
             lineView,
-            searchView, filterBtn,
+            searchView, sortBtn,
             machineTblView,
             qrView, qrImg, qrBtn,
             emptyLbl
@@ -49,7 +49,7 @@ final class MachineListView: UIView {
     
     func setupText() {
         navLbl.text = "Machine List"
-        searchField.placeholder = "Search by name or type...."
+        searchField.placeholder = "Search by name"
         emptyLbl.text = "There is no any Machine Data"
     }
     
@@ -86,8 +86,8 @@ final class MachineListView: UIView {
             $0.tintColor = .darkText
         }
         
-        filterBtn.style {
-            $0.setImage(#imageLiteral(resourceName: "ic_filter").transparent, for: .normal)
+        sortBtn.style {
+            $0.setImage(#imageLiteral(resourceName: "ic_sort").transparent, for: .normal)
             $0.tintColor = .darkGray
         }
         
@@ -140,7 +140,7 @@ final class MachineListView: UIView {
         searchView.snp.makeConstraints { (make) in
             make.top.equalTo(lineView.snp.bottom).offset(Margin.s12)
             make.leading.equalTo(navLbl)
-            make.trailing.equalTo(filterBtn.snp.leading).offset(-Margin.s12)
+            make.trailing.equalTo(sortBtn.snp.leading).offset(-Margin.s12)
             make.height.equalTo(Margin.h40.autoSize)
         }
         
@@ -156,7 +156,7 @@ final class MachineListView: UIView {
             make.trailing.equalTo(searchView).offset(-Margin.s16)
         }
         
-        filterBtn.snp.makeConstraints { (make) in
+        sortBtn.snp.makeConstraints { (make) in
             make.trailing.equalTo(addBtn)
             make.size.equalTo(Margin.i20.autoSize)
             make.centerY.equalTo(searchView)

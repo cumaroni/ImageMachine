@@ -28,7 +28,7 @@ class MachineListController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        isMachineDataEmpty()
+        getAllMachineData()
     }
     
     private func setupViewController() {
@@ -38,9 +38,16 @@ class MachineListController: UIViewController {
     private func binding() {
         bindAddBtn()
         bindSearchField()
-        bindFilterBtn()
+        bindSortBtn()
         bindMachineTblView()
         bindQRBtn()
+    }
+    
+    private func getAllMachineData() {
+        guard let allData = MachineRealmTable.getAllMachine() else { return }
+        machineData.accept(allData)
+        data = allData
+        isMachineDataEmpty()
     }
     
     private func bindAddBtn() {
@@ -51,15 +58,31 @@ class MachineListController: UIViewController {
     }
     
     private func bindSearchField() {
-        
+        func searchEditingChanged() {
+            if String.empty(root.searchField.text) {
+                machineData.accept(data)
+            } else {
+                machineData.accept(data.filter({
+                    $0.name.localizedCaseInsensitiveContains(root.searchField.text ?? "")
+                }))
+            }
+            root.machineTblView.reloadData()
+        }
+        root.searchField.rx.controlEvent(.editingChanged).subscribe(onNext: searchEditingChanged).disposed(by: disposable)
     }
     
-    private func bindFilterBtn() {
-        
+    private func bindSortBtn() {
+        func sortBtnPressed() {
+            presenter.presentSortAlert()
+        }
+        root.sortBtn.rx.tap.subscribe(onNext: sortBtnPressed).disposed(by: disposable)
     }
     
     private func bindMachineTblView() {
-        
+        machineData.asObservable().bind(to: root.machineTblView.rx.items(cellIdentifier: "cell", cellType: MachineListCell.self)) { (index, model, cell) in
+            cell.nameLbl.text = model.name
+            cell.typeLbl.text = model.type
+        }.disposed(by: disposable)
     }
     
     private func bindQRBtn() {
@@ -74,5 +97,10 @@ class MachineListController: UIViewController {
 }
 
 extension MachineListController: MachineListViewControllerDelegate {
+    
+    func sortMachineData(_ isByName: Bool) {
+        let sorted = isByName == true ? data.sorted(by: {$0.name < $1.name}) : data.sorted(by: {$0.type < $1.type})
+        machineData.accept(sorted)
+    }
     
 }

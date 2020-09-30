@@ -29,6 +29,12 @@ extension MachineListPresenter: MachineListPresenterDelegate {
         router.pushToMachineAdd()
     }
     
+    func presentSortAlert() {
+        router.presentSortAlert { sorted in
+            self.view?.sortMachineData(sorted)
+        }
+    }
+    
 }//DELEGATE
 
 extension MachineListPresenter: MachineListInteractorOutputDelegate {
