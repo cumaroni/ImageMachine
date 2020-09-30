@@ -20,6 +20,12 @@ final class MachineListRouter: MachineListRouterDelegate {
         source?.navigationController?.pushViewController(addVc, animated: true)
     }
     
+    func pushToMachineDetail(_ model: MachineRealmModel) {
+        let detailVc = MachineDetailController()
+        detailVc.setMachineDetailData(model)
+        source?.navigationController?.pushViewController(detailVc, animated: true)
+    }
+    
     func presentSortAlert(_ isSorted: @escaping (Bool) -> Void) {
         source?.presentActionSheet(title: "Sort By", message: "", alertAction: [
             UIAlertAction(title: "Name", style: .default, handler: { _ in

@@ -71,7 +71,7 @@ final class MachineListView: UIView {
         
         searchView.style {
             $0.backgroundColor = .white
-            $0.setLayer(cornerRadius: Margin.s12.autoSize, borderWidth: 0.7, borderColor: .gray)
+            $0.setLayer(cornerRadius: Margin.s12.autoSize, borderWidth: 0.4, borderColor: .gray)
         }
         
         searchImg.style {

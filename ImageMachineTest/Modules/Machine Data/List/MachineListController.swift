@@ -83,6 +83,10 @@ class MachineListController: UIViewController {
             cell.nameLbl.text = model.name
             cell.typeLbl.text = model.type
         }.disposed(by: disposable)
+        
+        root.machineTblView.rx.modelSelected(MachineRealmModel.self).subscribe(onNext: { model in
+            self.presenter.pushToMachineDetail(model)
+        }).disposed(by: disposable)
     }
     
     private func bindQRBtn() {
