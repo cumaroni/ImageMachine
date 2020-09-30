@@ -14,4 +14,18 @@ final class MachineAddRouter: MachineAddRouterDelegate {
     init(view: MachineAddViewControllerDelegate?) {
         source = view as? UIViewController
     }
+    
+    func presentErrorAlert(_ message: String) {
+        source?.presentAlert(title: "Failed", message: message, alertAction: [
+            UIAlertAction(title: "Close", style: .cancel, handler: nil)
+        ])
+    }
+    
+    func presentSuccessAlert() {
+        source?.presentAlert(title: "Success", message: "Add Machine Success", alertAction: [
+            UIAlertAction(title: "Close", style: .default, handler: { _ in
+                self.source?.navigationController?.popViewController(animated: true)
+            })
+        ])
+    }
 }

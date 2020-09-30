@@ -16,9 +16,17 @@ protocol MachineAddPresenterDelegate: AnyObject {
     
     func viewDidLoad()
     
+    func presentErrorAlert(_ message: String)
+    
+    func presentSuccessAlert()
+    
 }//PRESENTER
 
 protocol MachineAddRouterDelegate: AnyObject {
+    
+    func presentErrorAlert(_ message: String)
+    
+    func presentSuccessAlert()
     
 }//ROUTER
 
