@@ -29,8 +29,8 @@ extension MachineAddPresenter: MachineAddPresenterDelegate {
         router.presentErrorAlert(message)
     }
     
-    func presentSuccessAlert() {
-        router.presentSuccessAlert()
+    func presentSuccessAlert(_ message: String) {
+        router.presentSuccessAlert(message)
     }
     
 }//DELEGATE

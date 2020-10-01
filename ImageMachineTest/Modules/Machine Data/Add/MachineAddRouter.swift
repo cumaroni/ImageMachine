@@ -21,8 +21,8 @@ final class MachineAddRouter: MachineAddRouterDelegate {
         ])
     }
     
-    func presentSuccessAlert() {
-        source?.presentAlert(title: "Success", message: "Add Machine Success", alertAction: [
+    func presentSuccessAlert(_ message: String) {
+        source?.presentAlert(title: "Success", message: "\(message) Machine Success", alertAction: [
             UIAlertAction(title: "Close", style: .default, handler: { _ in
                 self.source?.navigationController?.popViewController(animated: true)
             })

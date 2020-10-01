@@ -14,6 +14,7 @@ class MachineAddController: UIViewController {
      
     var disposable = DisposeBag()
     
+    private var isUpdate: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,18 +84,31 @@ class MachineAddController: UIViewController {
     private func saveMachineDataToTable() {
         let machineModel = MachineRealmModel()
         let uuid = UUID().uuidString
-        machineModel.id = uuid
         machineModel.name = root.nameField.value ?? ""
         machineModel.type = root.typeField.value ?? ""
         machineModel.qrNumber = Int(root.qrCodeField.value ?? "") ?? 0
         machineModel.date = getCurrentDate()
-        MachineRealmTable.insertMachine(machineModel)
-        presenter.presentSuccessAlert()
+        if isUpdate == true {
+            MachineRealmTable.updateMachine(machineModel)
+            presenter.presentSuccessAlert("Update")
+        } else {
+            machineModel.id = uuid
+            MachineRealmTable.insertMachine(machineModel)
+            presenter.presentSuccessAlert("Add")
+        }
+        
     }
     
 }
 
 extension MachineAddController: MachineAddViewControllerDelegate {
     
+    func updateData(_ data: MachineRealmModel) {
+        self.isUpdate = true
+        root.nameField.value = data.name
+        root.typeField.value = data.type
+        root.qrCodeField.value = "\(data.qrNumber)"
+        root.addBtn.setTitle("UPDATE", for: .normal)
+    }
 }
 

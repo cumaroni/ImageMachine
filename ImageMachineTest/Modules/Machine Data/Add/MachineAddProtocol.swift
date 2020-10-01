@@ -18,7 +18,7 @@ protocol MachineAddPresenterDelegate: AnyObject {
     
     func presentErrorAlert(_ message: String)
     
-    func presentSuccessAlert()
+    func presentSuccessAlert(_ message: String)
     
 }//PRESENTER
 
@@ -26,7 +26,7 @@ protocol MachineAddRouterDelegate: AnyObject {
     
     func presentErrorAlert(_ message: String)
     
-    func presentSuccessAlert()
+    func presentSuccessAlert(_ message: String)
     
 }//ROUTER
 
