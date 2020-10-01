@@ -24,6 +24,10 @@ class MachineRealmTable: BaseTable<MachineRealmModel> {
     class func getMachineBy(id: String) -> MachineRealmModel? {
         return MachineRealmTable.data.filter("id = %@", id).first
     }
+    
+    class func getMachineBy(qrCodeNmbr: Int) -> MachineRealmModel? {
+        return MachineRealmTable.data.filter("qrNumber = %@", qrCodeNmbr).first
+    }
        
     class func insertMachine(_ data: MachineRealmModel) {
         guard MachineRealmTable.getMachineBy(id: data.id) == nil else { return }
