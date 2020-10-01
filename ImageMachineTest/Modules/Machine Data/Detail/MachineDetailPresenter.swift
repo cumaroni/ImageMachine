@@ -6,7 +6,7 @@
 //  Copyright © 2020 Roniaja. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class MachineDetailPresenter {
     weak var view: MachineDetailViewControllerDelegate?
@@ -23,6 +23,14 @@ extension MachineDetailPresenter: MachineDetailPresenterDelegate {
     
     func viewDidLoad() {
         
+    }
+    
+    func presentCarouselView(_ data: [UIImage], _ index: Int) {
+        router.presentCarouselView(data, index)
+    }
+    
+    func pushToMachineEdit(_ data: MachineRealmModel) {
+        router.pushToMachineEdit(data)
     }
     
 }//DELEGATE

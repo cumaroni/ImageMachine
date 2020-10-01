@@ -16,9 +16,17 @@ protocol MachineDetailPresenterDelegate: AnyObject {
     
     func viewDidLoad()
     
+    func presentCarouselView(_ data: [UIImage], _ index: Int)
+    
+    func pushToMachineEdit(_ data: MachineRealmModel)
+    
 }//PRESENTER
 
 protocol MachineDetailRouterDelegate: AnyObject {
+    
+    func presentCarouselView(_ data: [UIImage], _ index: Int)
+    
+    func pushToMachineEdit(_ data: MachineRealmModel)
     
 }//ROUTER
 

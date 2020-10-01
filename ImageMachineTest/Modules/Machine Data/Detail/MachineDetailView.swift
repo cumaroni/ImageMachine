@@ -11,6 +11,7 @@ import UIKit
 final class MachineDetailView: UIView {
     
     let backBtn = NormalBackBtn(title: "Back")
+    let moreBtn = UIButton()
     let navLbl = UILabel()
     let lineView = UIView()
     
@@ -26,6 +27,8 @@ final class MachineDetailView: UIView {
     
     let machineImgLbl = UILabel()
     let machineImgBtn = UIButton()
+    
+    let imgCollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewLayout())
       
     init() {
         super.init(frame: mainScreen)
@@ -38,9 +41,9 @@ final class MachineDetailView: UIView {
             qrLbl,
             dateLbl,
         ])
-        contentView.sv([stackView, machineImgLbl])
+        contentView.sv([stackView, machineImgLbl, imgCollectionView])
         scrollView.sv([contentView])
-        sv([backBtn, navLbl, lineView, scrollView, machineImgBtn])
+        sv([backBtn, moreBtn, navLbl, lineView, scrollView, machineImgBtn])
         
         setupConstraint()
         setupView()
@@ -63,6 +66,11 @@ final class MachineDetailView: UIView {
     }
     
     private func setupView() {
+        moreBtn.style {
+            $0.setImage(#imageLiteral(resourceName: "ic_more").transparent, for: .normal)
+            $0.tintColor = .black
+        }
+        
         [navLbl, machineImgLbl].style {
             $0.font = UIFont.boldSystemFont(ofSize: Margin.f30)
             $0.textAlignment = .left
@@ -92,12 +100,27 @@ final class MachineDetailView: UIView {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: Margin.f16)
         }
         
+        imgCollectionView.style {
+            $0.backgroundColor = .white
+            $0.bounces = false
+            $0.register(MachineDetailCell.self, forCellWithReuseIdentifier: "cell")
+            $0.setupNormalLayout(numberOfItemsInRow: 3, itemHeightRatio: 1, verticalSpacing: 0, horizontalSpacing: 0)
+            $0.isPagingEnabled = true
+            $0.showsHorizontalScrollIndicator = false
+        }
+        
     }
     
     private func setupConstraint() {
         backBtn.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(safeInset().top + Margin.s16)
             make.leading.equalTo(self).offset(Margin.s12)
+            make.size.equalTo(Margin.i20.autoSize)
+        }
+        
+        moreBtn.snp.makeConstraints { (make) in
+            make.centerY.equalTo(backBtn)
+            make.trailing.equalTo(self).offset(-Margin.s12)
         }
         
         lineView.snp.makeConstraints { (make) in
@@ -133,6 +156,12 @@ final class MachineDetailView: UIView {
         machineImgBtn.snp.makeConstraints { (make) in
             make.centerY.equalTo(machineImgLbl)
             make.leading.equalTo(machineImgLbl.snp.trailing).offset(Margin.s8)
+        }
+        
+        imgCollectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(machineImgLbl.snp.bottom).offset(Margin.s8)
+            make.leading.trailing.bottom.equalTo(contentView)
+            make.height.equalTo(mainScreen.height / 2)
         }
         
         setNeedsLayout()
