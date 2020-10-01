@@ -25,6 +25,13 @@
 		B0B011C325256EDD00A502B9 /* CodeReaderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011C225256EDD00A502B9 /* CodeReaderRouter.swift */; };
 		B0B011C525256EE900A502B9 /* CodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011C425256EE900A502B9 /* CodeReaderView.swift */; };
 		B0B011C725256F0B00A502B9 /* CodeReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011C625256F0B00A502B9 /* CodeReaderController.swift */; };
+		B0B011CA2525C74900A502B9 /* MachineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011C92525C74900A502B9 /* MachineDetailCell.swift */; };
+		B0B011CC2525C82200A502B9 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011CB2525C82200A502B9 /* UICollectionViewCell+Extensions.swift */; };
+		B0B011CE2525C83000A502B9 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011CD2525C83000A502B9 /* UICollectionView+Extensions.swift */; };
+		B0B011D02525D4E000A502B9 /* NormaCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011CF2525D4E000A502B9 /* NormaCarouselView.swift */; };
+		B0B011D22525D5A200A502B9 /* NormalCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011D12525D5A100A502B9 /* NormalCarouselController.swift */; };
+		B0B011D42525D80600A502B9 /* NormalCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011D32525D80600A502B9 /* NormalCarouselCell.swift */; };
+		B0B011D62525D90D00A502B9 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B011D52525D90D00A502B9 /* UIScrollView+Extensions.swift */; };
 		B0F0FBA72523202C00C382A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0FBA62523202C00C382A2 /* AppDelegate.swift */; };
 		B0F0FBAE2523202C00C382A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F0FBAC2523202C00C382A2 /* Main.storyboard */; };
 		B0F0FBB02523203400C382A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F0FBAF2523203400C382A2 /* Assets.xcassets */; };
@@ -110,6 +117,13 @@
 		B0B011C225256EDD00A502B9 /* CodeReaderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeReaderRouter.swift; sourceTree = "<group>"; };
 		B0B011C425256EE900A502B9 /* CodeReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeReaderView.swift; sourceTree = "<group>"; };
 		B0B011C625256F0B00A502B9 /* CodeReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeReaderController.swift; sourceTree = "<group>"; };
+		B0B011C92525C74900A502B9 /* MachineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailCell.swift; sourceTree = "<group>"; };
+		B0B011CB2525C82200A502B9 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		B0B011CD2525C83000A502B9 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		B0B011CF2525D4E000A502B9 /* NormaCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormaCarouselView.swift; sourceTree = "<group>"; };
+		B0B011D12525D5A100A502B9 /* NormalCarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCarouselController.swift; sourceTree = "<group>"; };
+		B0B011D32525D80600A502B9 /* NormalCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCarouselCell.swift; sourceTree = "<group>"; };
+		B0B011D52525D90D00A502B9 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		B0F0FBA32523202C00C382A2 /* ImageMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0FBA62523202C00C382A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0F0FBAD2523202C00C382A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +215,24 @@
 				DFEA68F5E7F0B9D427D52A18 /* Pods_ImageMachineTestTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0B011C82525C73C00A502B9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0B011C92525C74900A502B9 /* MachineDetailCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B0B011D72525DF2500A502B9 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B0B011CF2525D4E000A502B9 /* NormaCarouselView.swift */,
+				B0B011D32525D80600A502B9 /* NormalCarouselCell.swift */,
+				B0B011D12525D5A100A502B9 /* NormalCarouselController.swift */,
+			);
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 		B0F0FB9A2523202C00C382A2 = {
@@ -314,14 +346,17 @@
 				B0F0FC0B25232D6900C382A2 /* Realm+Extensions.swift */,
 				B0F0FC1225232D6A00C382A2 /* String+Extensions.swift */,
 				B0F0FC0D25232D6A00C382A2 /* UIAppearance+Extensions.swift */,
+				B0B011CD2525C83000A502B9 /* UICollectionView+Extensions.swift */,
+				B0B011CB2525C82200A502B9 /* UICollectionViewCell+Extensions.swift */,
 				B0F0FC1025232D6A00C382A2 /* UIDevice+Extensions.swift */,
 				B0F0FC1625232D6B00C382A2 /* UIEdgeInsets+Extensions.swift */,
 				B0F0FC0E25232D6A00C382A2 /* UIImage+Extensions.swift */,
 				B0F0FC0F25232D6A00C382A2 /* UIStackView+Extensions.swift */,
-				B0F0FC1825232D6B00C382A2 /* UIView+Extensions.swift */,
-				B0F0FC1425232D6A00C382A2 /* UIViewController+Extensions.swift */,
 				B0F0FC392523309500C382A2 /* UITableView+Extensions.swift */,
 				B0F0FC3F2523310400C382A2 /* UITableViewCell+Extensions.swift */,
+				B0F0FC1825232D6B00C382A2 /* UIView+Extensions.swift */,
+				B0F0FC1425232D6A00C382A2 /* UIViewController+Extensions.swift */,
+				B0B011D52525D90D00A502B9 /* UIScrollView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +364,7 @@
 		B0F0FBDC252321ED00C382A2 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				B0B011D72525DF2500A502B9 /* Carousel */,
 				B01A1B2A252448A40068F028 /* NormalBackBtn.swift */,
 				B01A1B2C252448AE0068F028 /* NormalTextField.swift */,
 				B01A1B2E252448B80068F028 /* NormalLblView.swift */,
@@ -404,6 +440,7 @@
 		B0F0FC2C25232EE000C382A2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B0B011C82525C73C00A502B9 /* Cell */,
 				B01A1B1C252446290068F028 /* MachineDetailInteractor.swift */,
 				B01A1B1E252446350068F028 /* MachineDetailPresenter.swift */,
 				B01A1B202524463E0068F028 /* MachineDetailProtocol.swift */,
@@ -712,13 +749,16 @@
 				B0B011C125256ED700A502B9 /* CodeReaderProtocol.swift in Sources */,
 				B0F0FC2425232D6B00C382A2 /* UIEdgeInsets+Extensions.swift in Sources */,
 				B0F0FC3825232F3500C382A2 /* MachineListController.swift in Sources */,
+				B0B011CC2525C82200A502B9 /* UICollectionViewCell+Extensions.swift in Sources */,
 				B0B011C325256EDD00A502B9 /* CodeReaderRouter.swift in Sources */,
 				B0F0FBEC2523258200C382A2 /* BaseTable.swift in Sources */,
 				B0F0FC402523310400C382A2 /* UITableViewCell+Extensions.swift in Sources */,
 				B0F0FBE42523255C00C382A2 /* BaseRouter.swift in Sources */,
+				B0B011D22525D5A200A502B9 /* NormalCarouselController.swift in Sources */,
 				B01A1B23252446470068F028 /* MachineDetailRouter.swift in Sources */,
 				B01A1B27252446730068F028 /* MachineDetailController.swift in Sources */,
 				B01A1B2B252448A40068F028 /* NormalBackBtn.swift in Sources */,
+				B0B011CA2525C74900A502B9 /* MachineDetailCell.swift in Sources */,
 				B0F0FC1F25232D6B00C382A2 /* Array+Extensions.swift in Sources */,
 				B0F0FC2325232D6B00C382A2 /* CGSize+Extensions.swift in Sources */,
 				B0F0FBEA2523257800C382A2 /* BaseDebug.swift in Sources */,
@@ -740,11 +780,14 @@
 				B0F0FC2525232D6B00C382A2 /* Date+Extensions.swift in Sources */,
 				B0F0FC5325234E0900C382A2 /* MachineAddRouter.swift in Sources */,
 				B0B011BB25256EAA00A502B9 /* CodeReaderInteractor.swift in Sources */,
+				B0B011CE2525C83000A502B9 /* UICollectionView+Extensions.swift in Sources */,
 				B0F0FC2025232D6B00C382A2 /* String+Extensions.swift in Sources */,
+				B0B011D02525D4E000A502B9 /* NormaCarouselView.swift in Sources */,
 				B0B011BD25256EC000A502B9 /* CodeReaderPresenter.swift in Sources */,
 				B01A1B1F252446360068F028 /* MachineDetailPresenter.swift in Sources */,
 				B0B011C725256F0B00A502B9 /* CodeReaderController.swift in Sources */,
 				B0F0FC3625232F2A00C382A2 /* MachineListView.swift in Sources */,
+				B0B011D42525D80600A502B9 /* NormalCarouselCell.swift in Sources */,
 				B0F0FC4A2523432C00C382A2 /* MachineListCell.swift in Sources */,
 				B0F0FC3A2523309500C382A2 /* UITableView+Extensions.swift in Sources */,
 				B0F0FBE82523257100C382A2 /* BaseConfig.swift in Sources */,
@@ -754,6 +797,7 @@
 				B0F0FC2825232D9500C382A2 /* DeviceTypeEn.swift in Sources */,
 				B0F0FC2125232D6B00C382A2 /* CGFloat+Extensions.swift in Sources */,
 				B0F0FC3025232F1100C382A2 /* MachineListPresenter.swift in Sources */,
+				B0B011D62525D90D00A502B9 /* UIScrollView+Extensions.swift in Sources */,
 				B0F0FC3425232F2100C382A2 /* MachineListRouter.swift in Sources */,
 				B0F0FC4F25234DF900C382A2 /* MachineAddPresenter.swift in Sources */,
 				B0F0FC5725234E2700C382A2 /* MachineAddController.swift in Sources */,

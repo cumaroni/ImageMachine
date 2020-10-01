@@ -6,6 +6,7 @@ target 'ImageMachineTest' do
   use_frameworks!
 
   # Pods for ImageMachineTest
+  pod 'BSImagePicker'
   pod 'RxDataSources'
   pod 'RealmSwift', '5.4.2'
   pod 'SnapKit'
