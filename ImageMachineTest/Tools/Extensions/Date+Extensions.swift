@@ -26,10 +26,5 @@ extension Date {
         return self.dateByAdding(7, Calendar.Component.hour)
     }
     
-    var differenceDate: TimeInterval {
-        let currentTime = Date().timeIntervalSince1970
-        let time = currentTime - self.timeIntervalSince1970
-        return time
-    }
     
 }

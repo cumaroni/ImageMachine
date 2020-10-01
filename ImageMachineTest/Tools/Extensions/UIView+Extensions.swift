@@ -42,15 +42,12 @@ extension UIView {
         layer.masksToBounds = true
     }
     
-    public func setShadow(offset: CGSize = CGSize(0), radius: CGFloat = 2, opacity: Float = 0.4, color: UIColor = .darkGray) {
-        // set shadow must be implement after set layer
-        // set layer first and then set shadow
+    public func setShadow(offset: CGSize = CGSize(0), radius: CGFloat = 2, opacity: Float = 0.4, color: UIColor = .darkGray) { 
         layer.masksToBounds = false
         layer.shadowColor = color.cgColor
         layer.shadowOpacity = opacity
         layer.shadowOffset = offset
         layer.shadowRadius = radius
-//        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
     }

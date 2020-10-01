@@ -19,9 +19,5 @@ extension CGFloat {
         default:
             return (self / 414) * mainScreen.width
         }
-    }
-    
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
+    } 
 }
