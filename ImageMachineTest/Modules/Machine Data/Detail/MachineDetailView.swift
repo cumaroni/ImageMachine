@@ -23,6 +23,9 @@ final class MachineDetailView: UIView {
     let typeLbl = NormalLblView()
     let qrLbl = NormalLblView()
     let dateLbl = NormalLblView()
+    
+    let machineImgLbl = UILabel()
+    let machineImgBtn = UIButton()
       
     init() {
         super.init(frame: mainScreen)
@@ -33,11 +36,11 @@ final class MachineDetailView: UIView {
             nameLbl,
             typeLbl,
             qrLbl,
-            dateLbl
+            dateLbl,
         ])
-        contentView.sv([stackView])
+        contentView.sv([stackView, machineImgLbl])
         scrollView.sv([contentView])
-        sv([backBtn, navLbl, lineView, scrollView])
+        sv([backBtn, navLbl, lineView, scrollView, machineImgBtn])
         
         setupConstraint()
         setupView()
@@ -55,10 +58,12 @@ final class MachineDetailView: UIView {
         typeLbl.initialize("Machine Type")
         qrLbl.initialize("Machine QR Code Number")
         dateLbl.initialize("Last Maintenance Date")
+        machineImgLbl.text = "Machine Image"
+        machineImgBtn.setTitle("Add", for: .normal)
     }
     
     private func setupView() {
-        navLbl.style {
+        [navLbl, machineImgLbl].style {
             $0.font = UIFont.boldSystemFont(ofSize: Margin.f30)
             $0.textAlignment = .left
             $0.textColor = .darkText
@@ -78,6 +83,15 @@ final class MachineDetailView: UIView {
             $0.axis = .vertical
             $0.spacing = Margin.s16
         }
+        
+        machineImgBtn.style {
+            $0.backgroundColor = .black
+            $0.contentEdgeInsets = UIEdgeInsets(horizontal: Margin.s8, vertical: Margin.s4)
+            $0.setLayer(cornerRadius: Margin.s8.autoSize)
+            $0.setTitleColor(.white, for: .normal)
+            $0.titleLabel?.font = UIFont.systemFont(ofSize: Margin.f16)
+        }
+        
     }
     
     private func setupConstraint() {
@@ -108,7 +122,17 @@ final class MachineDetailView: UIView {
         
         stackView.snp.makeConstraints { (make) in
             make.top.leading.equalTo(contentView).offset(Margin.s12)
-            make.trailing.bottom.equalTo(contentView).offset(-Margin.s12)
+            make.trailing.equalTo(contentView).offset(-Margin.s12)
+        }
+        
+        machineImgLbl.snp.makeConstraints { (make) in
+            make.top.equalTo(stackView.snp.bottom).offset(Margin.s24)
+            make.leading.equalTo(navLbl)
+        }
+        
+        machineImgBtn.snp.makeConstraints { (make) in
+            make.centerY.equalTo(machineImgLbl)
+            make.leading.equalTo(machineImgLbl.snp.trailing).offset(Margin.s8)
         }
         
         setNeedsLayout()

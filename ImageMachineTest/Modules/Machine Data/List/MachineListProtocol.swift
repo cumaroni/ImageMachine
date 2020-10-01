@@ -22,6 +22,8 @@ protocol MachineListPresenterDelegate: AnyObject {
     
     func pushToMachineDetail(_ model: MachineRealmModel)
     
+    func pushToCodeReader()
+    
     func presentSortAlert()
     
 }//PRESENTER
@@ -31,6 +33,8 @@ protocol MachineListRouterDelegate: AnyObject {
     func pushToMachineAdd()
     
     func pushToMachineDetail(_ model: MachineRealmModel)
+    
+    func pushToCodeReader()
     
     func presentSortAlert(_ isSorted: @escaping (Bool) -> Void) 
     

@@ -33,6 +33,10 @@ extension MachineListPresenter: MachineListPresenterDelegate {
         router.pushToMachineDetail(model)
     }
     
+    func pushToCodeReader() {
+        router.pushToCodeReader()
+    }
+    
     func presentSortAlert() {
         router.presentSortAlert { sorted in
             self.view?.sortMachineData(sorted)

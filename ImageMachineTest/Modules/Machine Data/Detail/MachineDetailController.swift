@@ -24,7 +24,19 @@ class MachineDetailController: UIViewController {
     }
     
     private func setupViewController() {
+        binding()
     }
+    
+    private func binding() {
+        bindMachineImgBtn()
+    }
+    
+    private func bindMachineImgBtn() {
+        func machineImgBtnPressed() {
+        }
+        root.machineImgBtn.rx.tap.subscribe(onNext: machineImgBtnPressed).disposed(by: disposable)
+    }
+    
 }
 
 extension MachineDetailController: MachineDetailViewControllerDelegate {
@@ -36,5 +48,4 @@ extension MachineDetailController: MachineDetailViewControllerDelegate {
         root.qrLbl.value = ": \(model.qrNumber)"
         root.dateLbl.value = ": \(model.date)"
     }
-    
 }

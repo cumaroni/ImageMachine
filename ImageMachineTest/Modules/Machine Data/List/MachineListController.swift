@@ -90,7 +90,11 @@ class MachineListController: UIViewController {
     }
     
     private func bindQRBtn() {
-        
+        func qrBtnPressed() {
+            presenter.pushToCodeReader()
+            
+        }
+        root.qrBtn.rx.tap.subscribe(onNext: qrBtnPressed).disposed(by: disposable)
     }
     
     private func isMachineDataEmpty() {
