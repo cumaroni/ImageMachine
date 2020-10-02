@@ -121,6 +121,7 @@ final class MachineDetailView: UIView {
         moreBtn.snp.makeConstraints { (make) in
             make.centerY.equalTo(backBtn)
             make.trailing.equalTo(self).offset(-Margin.s12)
+            make.size.equalTo(Margin.i20.autoSize)
         }
         
         lineView.snp.makeConstraints { (make) in
